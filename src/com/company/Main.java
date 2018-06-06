@@ -69,18 +69,22 @@ public class Main {
                     int i = rand.nextInt(3);
                     if (output.contains("caps")&&!output.contains("red")) {
                         System.out.println(hedges.get(i).toUpperCase());
+                       // System.out.println("1");
                     }
-                    if (output.contains("red")&&!output.contains("caps")) {
+                    else if(output.contains("red")&&!output.contains("caps")) {
                         final String ANSI_RED = "\u001B[31m";
                         System.out.println(ANSI_RED+ hedges.get(i));
+                       // System.out.println("2");
                     }
-                    if (output.contains("caps")&&output.contains("red"))
+                    else if (output.contains("caps")&&output.contains("red"))
                     {
                         final String ANSI_RED = "\u001B[31m";
                         System.out.println(ANSI_RED+ hedges.get(i).toUpperCase());
+                        //System.out.println("3");
                     }
                     else {
                         System.out.println(hedges.get(i));
+                        //System.out.println("4");
                     }
                     output = "";
                     break;
@@ -88,18 +92,22 @@ public class Main {
                     int n = rand.nextInt(3);
                     if (output.contains("caps")&&!output.contains("red")){
                         System.out.println(qualifiers.get(n).toUpperCase() + output.toUpperCase());
+                        //System.out.println("5");
                     }
-                    if (output.contains("red")&&!output.contains("caps")) {
+                    else if (output.contains("red")&&!output.contains("caps")) {
                         final String ANSI_RED = "\u001B[31m";
                         System.out.println(ANSI_RED+ qualifiers.get(n) + output);
+                        //System.out.println("6");
                     }
-                    if (output.contains("caps")&&output.contains("red"))
+                    else if (output.contains("caps")&&output.contains("red"))
                     {
                         final String ANSI_RED = "\u001B[31m";
                         System.out.println(ANSI_RED+ qualifiers.get(n).toUpperCase() + output.toUpperCase());
+                        //System.out.println("7");
                     }
                     else {
                         System.out.println(qualifiers.get(n) + output);
+                        //System.out.println("8");
                     }
                     output = "";
                     break;
